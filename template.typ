@@ -113,9 +113,9 @@
   showybox(
     title: [* #name *],
     frame:(
-      title-color:  red,
+      title-color:  rgb("#ED1F53"),
       body-color:   rgb("#FCE4DF"),
-      border-color: red,
+      border-color: rgb("#ED1F53"),
       radius: 2pt
     ),
     title-style:(

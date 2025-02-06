@@ -1,4 +1,4 @@
-#import "./template.typ": *
+#import "../../template.typ": *
 
 #show: conf.with(
   title:   "Конспект лекций по предмету",
@@ -10,7 +10,6 @@
 
 #show "САР": name => text(blue)[_#name _]
 САР - система автоматического регулирования;
-
 
 = Вводная лекция
 \
