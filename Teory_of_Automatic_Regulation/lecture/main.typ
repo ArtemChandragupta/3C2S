@@ -1,4 +1,4 @@
-#import "../../template.typ": *
+#import "./template.typ": *
 
 #show: conf.with(
   title:   "Конспект лекций по предмету",

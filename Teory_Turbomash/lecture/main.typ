@@ -1,4 +1,4 @@
-#import "../../template.typ": *
+#import "./template.typ": *
 
 #show: conf.with(
   title:   "Конспект лекций по предмету",
@@ -7,6 +7,49 @@
 )
 
 = КПД турбины
+
+#figure(
+  cetz.canvas(length:1.5cm, {
+    import cetz.draw: *
+    set-style(
+      mark: (transform-shape: false, fill: black)
+    )
+    // Variables
+    let axis_L =  5
+    let cz     = -5
+    let c1u    = -5
+    let u      =  3
+    let c2u    =  0
+
+    // Axis
+    line(name:"axisu", (axis_L,0),(-axis_L,0), mark:(end: "stealth"))
+    line(name:"axisz", (   0  ,0),(0,cz - .5), mark:(end: "stealth"))
+    content("axisu.end", $U$, padding:.2, anchor:"north-west" )
+    content("axisz.end", $z$, padding:.1, anchor:"south-west" )
+
+    // First triangle
+    line(name:"C1", (  0  ,0 ),(c1u  ,cz), mark:(end:"stealth", fill:red), stroke:red)
+    line(name:"W1", (  0  ,0 ),(c1u+u,cz), mark:(end:"stealth", fill:red), stroke:red)
+    line(name:"u1", (c1u+u,cz),(c1u  ,cz), mark:(end:"stealth", fill:red), stroke:red)
+    content("C1.end", $C_1$, padding:.1, anchor:"north")
+    content("W1.end", $W_1$, padding:.1, anchor:"north")
+    content("u1.mid", $u$,   padding:.1, anchor:"north")
+
+    // Second triangle
+    line(name:"C2", (  0  ,0 ),(c2u  ,cz), mark:(end:"stealth", fill:blue), stroke:blue)
+    line(name:"W2", (  0  ,0 ),(c2u+u,cz), mark:(end:"stealth", fill:blue), stroke:blue)
+    line(name:"u2", (c2u+u,cz),(c2u  ,cz), mark:(end:"stealth", fill:blue), stroke:blue)
+    content("C2.end", $C_2$,       padding:.1, anchor:"east" )
+    content("W2.end", $W_2$,       padding:.1, anchor:"north")
+    content("u2.mid", $u=W_(z 2)$, padding:.1, anchor:"north")
+
+    // Angles
+    cetz.angle.angle((0,0), "axisu.end",  "W1.end", label:$beta_1$,    label-radius:120%, mark:(symbol:"stealth"), radius:1)
+    cetz.angle.angle((0,0), "axisu.end",  "C1.end", label:$alpha_1$,   label-radius:110%, mark:(symbol:"stealth"), radius:2)
+    cetz.angle.angle((0,0), "W2.end","axisu.start", label:$beta_2^*$,  label-radius:110%, mark:(symbol:"stealth"), radius:2)
+    cetz.angle.angle((0,0), "C2.end","axisu.start", label:$alpha_2^*$, label-radius:120%, mark:(symbol:"stealth"), radius:1)
+  })
+)
 
 #teo(name: "Адиабатический КПД")[
   Оценивает гидравлическое совершенство турбины:
