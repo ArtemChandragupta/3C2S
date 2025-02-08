@@ -2,7 +2,6 @@
 #import "@preview/showybox:2.0.3": showybox // Коробки
 #import "@preview/physica:0.9.4": *         // Физические формулы
 #import "@preview/cetz:0.3.2"               // Диаграммы
-#import "@preview/fletcher:0.5.4" as fletcher: diagram, node, edge
 
 #let conf(
   title:   "Конспект",

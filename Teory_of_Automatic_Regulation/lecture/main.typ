@@ -61,17 +61,6 @@
   - Следящие:
     - $x_"опт"="var"$, характер изменения заранее не известен.
 
-// #diagram(
-//   node((0,1), $A$, stroke: 1pt, shape: fletcher.shapes.diamond),
-//   node((2,0), [Bézier], fill: purple.lighten(80%)),
-//   render: (grid, nodes, edges, options) => {
-//     cetz.canvas({
-//       fletcher.draw-diagram(grid, nodes, edges, debug: options.debug)
-//       cetz.draw.line((0,0),(2,2))
-//     })
-//   }
-// )
-
 #figure(
   [
     #cetz.canvas({
@@ -125,58 +114,15 @@
       content("f1.mid", $f_1$, anchor:"south-east", padding:.1)
       content("f2.mid", $f_2$, anchor:"south-west", padding:.1)
     })
-    $x$ - регулируемая величина (число оборотов)\
-  $x_"опт"$ - оптимальное значение регулируемой величины\
-  $epsilon_R$ - ошибка регулирования\
-  "Лампочка" - сумматор\
-  $f_x$ - возмущения
+    #align(left)[Где:]
+    $ x &"- регулируемая величина (число оборотов)"\
+    x_"опт" &"- оптимальное значение регулируемой величины"\
+    epsilon_R &"- ошибка регулирования"\
+    "Лампочка" &"- сумматор"\
+    f_x &"- возмущения" $
   ],
   caption: [Функциональная схема САР],
 )
-
-
-// #figure(
-//   [#diagram(
-//     node-stroke: 1pt,
-//
-//     node((0,0),"зу",shape:rect),
-//     edge("-|>-"),
-//     node((1,0),radius:1,name:"lamp"),
-//     edge("-|>-"),
-//     node((2,0),"у",shape:rect),
-//     edge("-|>-"),
-//     node((3,0),"ро",shape:rect),
-//     edge("-|>-"),
-//     node((4,0),"ор",shape:rect,name:<or>),
-//     edge("-|>",$x$),
-//     node((5,0),),
-//     node((4.5,0),name:"x"),
-//
-//     edge((<or.north-west>, 25%, <or.north-east>),"<|-", "u", $f_1$,label-side: left),
-//     edge((<or.north-west>, 75%, <or.north-east>),"<|-", "u", $f_2$),
-//
-//     edge(<lamp>,<che>,corner:left,"<|-"),
-//     node((3,1),"чэ",shape:rect,name:"che"),
-//     edge(<che>,<x>,corner:left,"<|-"),
-//     render: (grid, nodes, edges, options) => {
-//       cetz.canvas({
-//         fletcher.draw-diagram(grid, nodes, edges, debug: options.debug)
-//         cetz.draw.arc((2.5,.5),radius:0.5,mode:"PIE",   start:225deg, delta:90deg, fill:black, anchor:"origin")
-//         cetz.draw.arc((2.5,.5),radius:0.5,mode:"CLOSE", start:45deg, delta:180deg, anchor:"origin")
-//         cetz.draw.arc((2.5,.5),radius:0.5,mode:"CLOSE", start:-45deg, delta:180deg, anchor:"origin")
-//       })
-//     }
-//     )
-//
-//     #align(left)[Где:]
-//     $ x &"- регулируемая величина (число оборотов)"\
-//     x_"опт" &"- оптимальное значение регулируемой величины"\
-//     epsilon_R &"- ошибка регулирования"\
-//     "Лампочка" &"- сумматор"\
-//     f_x &"- возмущения" $
-//   ],
-//   caption: [Функциональная схема САР],
-// )
 
 2. По принципу регулирования:
   + По возмущению
