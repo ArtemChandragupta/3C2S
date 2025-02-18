@@ -74,12 +74,19 @@
 
   // Заголовки
   set heading(numbering: "1.")
-  show heading: it => {
+  show heading.where(
+    level: 1
+  ): it => {
     pagebreak(weak:true)
     set text(hyphenate: false)
     set align(center)
     set block(above: 1.4em, below: 1em)
-    // set text(14pt)
+    it
+  }
+  show heading: it => {
+    set text(hyphenate: false)
+    // set align(center)
+    set block(above: 1.4em, below: 1em)
     it
   }
 
