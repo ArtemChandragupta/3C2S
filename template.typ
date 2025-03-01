@@ -2,6 +2,7 @@
 #import "@preview/showybox:2.0.3": showybox // Коробки
 #import "@preview/physica:0.9.4": *         // Физические формулы
 #import "@preview/cetz:0.3.2"               // Диаграммы
+#import "@preview/pinit:0.2.2": *           // Выделение
 
 #let conf(
   title:   "Конспект",
