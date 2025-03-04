@@ -1,7 +1,7 @@
 // Импорт сторонних пакетов
-#import "@preview/showybox:2.0.3": showybox // Коробки
+#import "@preview/showybox:2.0.4": showybox // Коробки
 #import "@preview/physica:0.9.4": *         // Физические формулы
-#import "@preview/cetz:0.3.2"               // Диаграммы
+#import "@preview/cetz:0.3.3"               // Диаграммы
 #import "@preview/pinit:0.2.2": *           // Выделение
 
 #let conf(
@@ -23,7 +23,7 @@
   )
   set par(
     justify: true,
-    first-line-indent: 1.25cm,
+    first-line-indent: (amount: 1.25cm, all: true)
   )
 
   // Leading fix
