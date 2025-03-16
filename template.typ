@@ -1,7 +1,7 @@
 // Импорт сторонних пакетов
 #import "@preview/showybox:2.0.4": showybox // Коробки
-#import "@preview/physica:0.9.4": *         // Физические формулы
-#import "@preview/cetz:0.3.3"               // Диаграммы
+#import "@preview/physica:0.9.5": *         // Физические формулы
+#import "@preview/cetz:0.3.4"               // Диаграммы
 #import "@preview/pinit:0.2.2": *           // Выделение
 
 #let conf(
