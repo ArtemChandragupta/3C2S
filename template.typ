@@ -3,6 +3,7 @@
 #import "@preview/physica:0.9.5": *         // Физические формулы
 #import "@preview/cetz:0.3.4"               // Диаграммы
 #import "@preview/pinit:0.2.2": *           // Выделение
+#import "@preview/fletcher:0.5.7" as fletcher: diagram, node, edge
 
 #let conf(
   title:   "Конспект",
